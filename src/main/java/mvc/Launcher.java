@@ -7,7 +7,7 @@ public class Launcher {
         model.addView(new ViewLogger());
         model.addView(new ViewGUI());
         final Controller controller = new ControllerImpl(model);
-        final InputSource inputSource = new InputSourceGUI();
-        inputSource.addController(controller);
+        (new InputSourceGUI()).addController(controller);
+        (new InputSourceStd()).addController(controller);
     }
 }
