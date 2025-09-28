@@ -6,8 +6,9 @@ public class Launcher {
         final Model model = new ModelImpl();
         model.addView(new ViewLogger());
         model.addView(new ViewGUI());
-        final Controller controller = new ControllerImpl(model);
+        final Controller controller = new ControllerFromInput(model);
         (new InputSourceGUI()).addController(controller);
         (new InputSourceStd()).addController(controller);
+        new AutonomousController(model);
     }
 }

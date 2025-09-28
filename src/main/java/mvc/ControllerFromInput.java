@@ -1,10 +1,10 @@
 package mvc;
 
-public class ControllerImpl implements Controller {
+public class ControllerFromInput implements Controller {
 
     private final Model model;
 
-    public ControllerImpl(final Model model) {
+    public ControllerFromInput(final Model model) {
         this.model = model;
     }
 
